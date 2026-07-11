@@ -30,9 +30,6 @@ export default function Footer() {
               <a href="#" aria-label="WhatsApp">
                 <i className="fa-brands fa-whatsapp"></i>
               </a>
-              <a href="#" aria-label="LinkedIn">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
             </div>
           </div>
           <div className="footer-cols">
@@ -53,7 +50,6 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Lihle Websites. All rights reserved.</span>
-          <span>Designed & built by Khaya, in Johannesburg 🇿🇦</span>
         </div>
       </div>
     </footer>

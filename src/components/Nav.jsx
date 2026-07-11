@@ -63,10 +63,10 @@ export default function Nav() {
                 {l.label}
               </button>
             ))}
+            <button className="pill-nav-cta" onClick={() => navigate("/book-a-project")}>
+              Book a Project
+            </button>
           </nav>
-          <button className="btn btn-dark btn-sm nav-cta-desktop" onClick={() => navigate("/book-a-project")}>
-            Book a Project
-          </button>
           <button className="hamburger" onClick={() => setOpen(true)} aria-label="Open menu">
             <i className="fa-solid fa-bars"></i>
           </button>

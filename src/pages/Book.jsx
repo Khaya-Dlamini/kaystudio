@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import Reveal from "../components/Reveal.jsx";
-import { PROJECT_TYPES, TIMELINES } from "../data/projects.js";
+import { PROJECT_TYPES } from "../data/projects.js";
 
 export default function Book() {
   const [projectType, setProjectType] = useState(null);
-  const [timeline, setTimeline] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ export default function Book() {
 
   return (
     <>
-      <header className="page-header">
+      <header className="page-header light">
         <div className="container">
           <span className="eyebrow">
             <i className="fa-solid fa-bolt"></i> Book a Project
@@ -45,14 +44,6 @@ export default function Book() {
             </Reveal>
           ) : (
             <div className="form-card">
-              <div className="form-note">
-                <i className="fa-solid fa-circle-info"></i>
-                <span>
-                  This form covers everything I need to get started — no online store options here,
-                  since Lihle Websites doesn't build e-commerce sites.
-                </span>
-              </div>
-
               <form onSubmit={onSubmit}>
                 <div className="field">
                   <label htmlFor="name">Full name</label>
@@ -82,22 +73,6 @@ export default function Book() {
                         onClick={() => setProjectType(pt.id)}
                       >
                         <i className={`fa-solid ${pt.icon}`}></i> {pt.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="field">
-                  <label>What's your timeline?</label>
-                  <div className="option-grid">
-                    {TIMELINES.map((t) => (
-                      <button
-                        type="button"
-                        key={t.id}
-                        className={`option-btn ${timeline === t.id ? "selected" : ""}`}
-                        onClick={() => setTimeline(t.id)}
-                      >
-                        <i className="fa-solid fa-calendar"></i> {t.label}
                       </button>
                     ))}
                   </div>

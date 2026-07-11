@@ -4,7 +4,7 @@ export const PROJECTS = [
     name: "Kettle & Cane Café",
     category: "Cafe & Restaurant",
     icon: "fa-mug-hot",
-    gradient: "linear-gradient(135deg,#0ea672,#087a54)",
+    gradient: "linear-gradient(135deg,#7a8f3a,#5f6f2c)",
     blurb:
       "A warm, menu-first site for a neighbourhood café — built to load fast on phones ordering from the counter queue.",
     tags: ["Menu & hours", "Mobile-first", "Local SEO"],
@@ -14,7 +14,7 @@ export const PROJECTS = [
     name: "Mopani Wellness Studio",
     category: "Wellness",
     icon: "fa-spa",
-    gradient: "linear-gradient(135deg,#7c5cfc,#0ea672)",
+    gradient: "linear-gradient(135deg,#7c5cfc,#7a8f3a)",
     blurb:
       "A calm, breathable brand site for a yoga & massage studio, with a booking flow that feels as relaxed as the space.",
     tags: ["Class schedule", "Booking flow", "Brand system"],
@@ -34,7 +34,7 @@ export const PROJECTS = [
     name: "Ubuntu Youth Foundation",
     category: "Community",
     icon: "fa-people-group",
-    gradient: "linear-gradient(135deg,#0ea672,#7c5cfc)",
+    gradient: "linear-gradient(135deg,#7a8f3a,#7c5cfc)",
     blurb:
       "A donations and impact site for a youth non-profit, built to make giving simple and the mission easy to believe in.",
     tags: ["Donations", "Impact stats", "Volunteer form"],
@@ -54,7 +54,7 @@ export const PROJECTS = [
     name: "Green Acres Landscaping",
     category: "Business",
     icon: "fa-leaf",
-    gradient: "linear-gradient(135deg,#087a54,#f5b942)",
+    gradient: "linear-gradient(135deg,#5f6f2c,#f5b942)",
     blurb:
       "A straightforward service site for a landscaping crew — quote requests up front, real project photos doing the talking.",
     tags: ["Quote requests", "Service areas", "Before/after"],
@@ -73,16 +73,7 @@ export const CATEGORIES = [
 export const PROJECT_TYPES = [
   { id: "business", label: "Business website", icon: "fa-briefcase" },
   { id: "portfolio", label: "Personal portfolio", icon: "fa-user" },
-  { id: "restaurant", label: "Café / restaurant site", icon: "fa-mug-hot" },
   { id: "blog", label: "Blog", icon: "fa-pen" },
-  { id: "nonprofit", label: "Nonprofit / community", icon: "fa-people-group" },
   { id: "landing", label: "Landing page", icon: "fa-bolt" },
   { id: "other", label: "Something else", icon: "fa-comment-dots" },
-];
-
-export const TIMELINES = [
-  { id: "asap", label: "ASAP" },
-  { id: "month", label: "Within a month" },
-  { id: "quarter", label: "1–3 months" },
-  { id: "flexible", label: "I'm flexible" },
 ];

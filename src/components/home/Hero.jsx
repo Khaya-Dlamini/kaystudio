@@ -8,9 +8,6 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="container hero-inner">
         <div>
-          <span className="hero-tag eyebrow">
-            <i className="fa-solid fa-mug-hot"></i> Custom sites, brewed to order
-          </span>
           <h1>
             Websites brewed for brands <span>people remember.</span>
           </h1>
@@ -18,28 +15,6 @@ export default function Hero() {
             I design and build fast, custom websites for small businesses tired of looking like
             everyone else on the block. No templates, no jargon — just a site that feels like yours.
           </p>
-          <div className="hero-actions">
-            <button className="btn btn-gold" onClick={() => navigate("/book-a-project")}>
-              <i className="fa-solid fa-bolt"></i> Start a Website
-            </button>
-            <button className="btn btn-outline" onClick={() => navigate("/portfolio")}>
-              <i className="fa-solid fa-arrow-up-right-from-square"></i> See My Work
-            </button>
-          </div>
-          <div className="hero-stats">
-            <div>
-              <strong>5+</strong>
-              <span>Projects Shipped</span>
-            </div>
-            <div>
-              <strong>3+</strong>
-              <span>Years Experience</span>
-            </div>
-            <div>
-              <strong>98.5%</strong>
-              <span>Client Satisfaction</span>
-            </div>
-          </div>
         </div>
 
         <div className="editor-wrap">

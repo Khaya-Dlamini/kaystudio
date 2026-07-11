@@ -12,7 +12,7 @@ export default function Contact() {
 
   return (
     <>
-      <header className="page-header">
+      <header className="page-header light">
         <div className="container">
           <span className="eyebrow">
             <i className="fa-solid fa-comments"></i> Contact
