@@ -14,7 +14,7 @@ export default function CtaSection() {
           </p>
           <div className="btn-actions">
             <button className="btn btn-gold" onClick={() => navigate("/book-a-project")}>
-              <i className="fa-solid fa-bolt"></i> Book a Project
+              Book a Project
             </button>
             <button className="btn btn-outline" onClick={() => navigate("/portfolio")}>
               See My Work

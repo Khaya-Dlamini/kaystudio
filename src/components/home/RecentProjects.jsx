@@ -29,7 +29,7 @@ export default function RecentProjects() {
         </div>
         <div className="projects-footer">
           <button className="btn btn-ghost" onClick={() => navigate("/portfolio")}>
-            View Full Portfolio <i className="fa-solid fa-arrow-right"></i>
+            View Full Portfolio
           </button>
         </div>
       </div>

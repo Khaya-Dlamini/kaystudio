@@ -22,14 +22,14 @@ export default function Book() {
       <header className="page-header light">
         <div className="container">
           <span className="eyebrow">
-            <i className="fa-solid fa-bolt"></i> Book a Project
+            Book a Project
           </span>
           <h1>Tell me about your brand.</h1>
           <p>Fill this in and I'll get back to you within a couple of days with next steps and a realistic timeline.</p>
         </div>
       </header>
 
-      <section>
+      <section className="booking-section">
         <div className="container form-wrap">
           {submitted ? (
             <Reveal className="form-card success-card in">

@@ -22,7 +22,7 @@ export default function Contact() {
         </div>
       </header>
 
-      <section>
+      <section className="contact-section">
         <div className="container contact-grid">
           <Reveal className="contact-card">
             <div className="contact-item">
@@ -61,7 +61,7 @@ export default function Contact() {
               brand and what you need, and I'll take it from there.
             </p>
             <button className="btn btn-gold" onClick={() => navigate("/book-a-project")}>
-              <i className="fa-solid fa-bolt"></i> Book a Project
+              Book a Project
             </button>
           </Reveal>
         </div>

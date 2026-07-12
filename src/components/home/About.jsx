@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div>
               <strong>Fun fact</strong>
-              <span>I play violin & flute 🎻🎶</span>
+              <span>I play violin & flute </span>
             </div>
           </div>
         </Reveal>
@@ -26,7 +26,7 @@ export default function About() {
             <i className="fa-solid fa-user"></i> About me
           </span>
           <h2>Hey, I'm Khaya.</h2>
-          <span className="about-role">Vibe coder & front-end developer, based in Johannesburg, South Africa 🇿🇦</span>
+          <span className="about-role">Vibe coder & front-end developer, based in Johannesburg, South Africa</span>
           <p>
             I started Lihle Websites because too many small businesses settle for templates that look
             like everyone else. Your brand deserves better — and that's what I deliver.

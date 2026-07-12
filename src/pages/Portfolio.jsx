@@ -26,10 +26,10 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <section>
+      <section className="portfolio-grid-section">
         <div className="container">
           <div className="project-grid wide">
-            {PROJECTS.map((p, i) => (
+            {PROJECTS.slice(0, 5).map((p, i) => (
               <Reveal key={p.id} delay={(i % 3) * 90}>
                 <ProjectCard project={p} />
               </Reveal>
