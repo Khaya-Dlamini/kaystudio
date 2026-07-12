@@ -25,8 +25,23 @@ export default function Nav() {
     }
   };
 
+  const goHome = () => {
+    setOpen(false);
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.getElementById("top")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      navigate("/");
+    }
+  };
+
+  const handleNavAction = (action) => {
+    setOpen(false);
+    action();
+  };
+
   const links = [
-    { id: "home", label: "Home", active: location.pathname === "/", action: () => navigate("/") },
+    { id: "home", label: "Home", active: location.pathname === "/", action: goHome },
     { id: "services", label: "Services", active: false, action: goToServices },
     {
       id: "portfolio",
@@ -50,7 +65,7 @@ export default function Nav() {
           href="/"
           onClick={(e) => {
             e.preventDefault();
-            navigate("/");
+            goHome();
           }}
         >
           <img className="logo-img" src={logo} alt="Lihle Websites logo" />
@@ -59,15 +74,15 @@ export default function Nav() {
         <div className="nav-right">
           <nav className="pill-nav" aria-label="Primary">
             {links.map((l) => (
-              <button key={l.id} className={l.active ? "active" : ""} onClick={l.action}>
+              <button key={l.id} className={l.active ? "active" : ""} onClick={() => handleNavAction(l.action)}>
                 {l.label}
               </button>
             ))}
-            <button className="pill-nav-cta" onClick={() => navigate("/book-a-project")}>
+            <button className="pill-nav-cta" onClick={() => handleNavAction(() => navigate("/book-a-project"))}>
               Book a Project
             </button>
           </nav>
-          <button className="hamburger" onClick={() => setOpen(true)} aria-label="Open menu">
+          <button className="hamburger" onClick={() => setOpen((prev) => !prev)} aria-label="Open menu">
             <i className="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -83,11 +98,11 @@ export default function Nav() {
             <i className="fa-solid fa-xmark"></i>
           </button>
           {links.map((l) => (
-            <button key={l.id} onClick={l.action}>
+            <button key={l.id} onClick={() => handleNavAction(l.action)}>
               {l.label}
             </button>
           ))}
-          <button className="btn btn-gold" onClick={() => navigate("/book-a-project")}>
+          <button className="btn btn-gold" onClick={() => handleNavAction(() => navigate("/book-a-project"))}>
             Book a Project
           </button>
         </div>

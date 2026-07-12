@@ -8,7 +8,11 @@ export default function ProjectCard({ project }) {
           <span></span>
         </div>
         <div className="glow"></div>
-        <i className={`fa-solid ${project.icon} mark`}></i>
+        {project.image ? (
+          <img className="project-image" src={project.image} alt={project.name} />
+        ) : (
+          <i className={`fa-solid ${project.icon} mark`}></i>
+        )}
       </div>
       <div className="project-body">
         <span className="project-cat">{project.category}</span>

@@ -2,18 +2,18 @@ import Reveal from "../Reveal.jsx";
 
 const STEPS = [
   {
-    icon: "fa-compass",
+    number: "01",
     title: "Map the message",
     body: "We turn your offer, audience, and proof into a clear homepage structure.",
   },
   {
-    icon: "fa-palette",
-    title: "Design the feeling",
+    number: "02",
+    title: "Design",
     body: "Color, type, spacing, and interaction choices make the brand instantly recognizable.",
   },
   {
-    icon: "fa-rocket",
-    title: "Launch the page",
+    number: "03",
+    title: "Launch",
     body: "The final site is arranged for real visitors: responsive, readable, and ready to share.",
   },
 ];
@@ -36,9 +36,7 @@ export default function Services() {
         <div className="service-grid">
           {STEPS.map((s, i) => (
             <Reveal key={s.title} delay={i * 90} className="service-card">
-              <div className="service-num">
-                <i className={`fa-solid ${s.icon}`}></i>
-              </div>
+              <div className="service-num">{s.number}</div>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
               <div className="service-underline"></div>
