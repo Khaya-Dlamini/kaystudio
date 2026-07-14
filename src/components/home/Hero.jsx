@@ -9,11 +9,10 @@ export default function Hero() {
       <div className="container hero-inner">
         <div>
           <h1>
-            Websites brewed for brands <span>people remember.</span>
+            Websites that make your brand <span> impossible </span> to ignore.
           </h1>
           <p className="lede">
-            I design and build fast, custom websites for small businesses tired of looking like
-            everyone else on the block. No templates, no jargon — just a site that feels like yours.
+            Lihle Websites builds bold, fast, conversion-ready websites for businesses that refuse to blend in. From concept to launch, we handle it all.
           </p>
         </div>
 

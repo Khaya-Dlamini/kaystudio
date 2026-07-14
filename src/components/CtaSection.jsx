@@ -9,7 +9,7 @@ export default function CtaSection() {
         <Reveal className="cta-panel">
           <h2>Let's build something unforgettable.</h2>
           <p>
-            Tell me about your brand and what you need — I'll reply with next steps and a realistic
+            Tell me about your brand and what you need, I'll reply with next steps and a realistic
             timeline, no pressure.
           </p>
           <div className="btn-actions">

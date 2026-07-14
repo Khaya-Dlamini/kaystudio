@@ -31,7 +31,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4>Email</h4>
-                <a href="mailto:hello@lihlewebsites.co.za">hello@lihlewebsites.co.za</a>
+                <a href="mailto:info@lihlewebsites.co.za">info@lihlewebsites.co.za</a>
               </div>
             </div>
             <div className="contact-item">
@@ -40,7 +40,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4>WhatsApp</h4>
-                <a href="tel:+27000000000">+27 00 000 0000</a>
+                <a href="tel:+27000000000">+27 78 522 0625</a>
               </div>
             </div>
             <div className="contact-item">

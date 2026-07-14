@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
           <div className="footer-cols">
             <div className="footer-col">
-              <h4>Site</h4>
+              <h4>Explore</h4>
               <button onClick={() => navigate("/")}>Home</button>
               <button onClick={goToServices}>Services</button>
               <button onClick={() => navigate("/portfolio")}>Portfolio</button>
@@ -42,8 +42,8 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <h4>Get in touch</h4>
-              <a href="mailto:hello@lihlewebsites.co.za">hello@lihlewebsites.co.za</a>
-              <a href="tel:+27000000000">+27 00 000 0000</a>
+              <a href="mailto:info@lihlewebsites.co.za">info@lihlewebsites.co.za</a>
+              <a href="tel:+27000000000">+27 78 522 0625</a>
               <button onClick={() => navigate("/book-a-project")}>Book a Project</button>
             </div>
           </div>

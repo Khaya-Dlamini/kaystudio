@@ -14,9 +14,9 @@ export default function RecentProjects() {
           <span className="eyebrow">
             <i className="fa-solid fa-folder-open"></i> Recent work
           </span>
-          <h2>A couple of brands I've recently built for.</h2>
+          <h2>Work we are proud of.</h2>
           <p>
-            Every project gets the same treatment — understand the brand first, then build something
+            Every project gets the same treatment. Understand the brand first, then build something
             that fits it exactly.
           </p>
         </Reveal>

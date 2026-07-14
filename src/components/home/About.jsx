@@ -29,11 +29,11 @@ export default function About() {
           <span className="about-role">Vibe coder & front-end developer, based in Johannesburg, South Africa</span>
           <p>
             I started Lihle Websites because too many small businesses settle for templates that look
-            like everyone else. Your brand deserves better — and that's what I deliver.
+            like everyone else. Your brand deserves better and that's what I deliver.
           </p>
           <p>
             I work closely with each client to understand their vision, then build a website that
-            feels uniquely theirs. No cookie-cutter designs, no confusing jargon — just clean work that
+            feels uniquely theirs. No cookie-cutter designs, no confusing jargon, just clean work that
             gets results. And when I'm not behind the keyboard, you'll find me making music.
           </p>
 
@@ -42,7 +42,7 @@ export default function About() {
               <div className="icon">
                 <i className="fa-solid fa-compass"></i>
               </div>
-              <p>Every project starts with understanding your brand — not a template.</p>
+              <p>Every project starts with understanding your brand, not a template.</p>
             </div>
             <div className="about-pillar">
               <div className="icon">
@@ -54,7 +54,7 @@ export default function About() {
               <div className="icon">
                 <i className="fa-solid fa-handshake"></i>
               </div>
-              <p>You're involved at every step — no surprises at launch.</p>
+              <p>You're involved at every step. No surprises at launch.</p>
             </div>
           </div>
 

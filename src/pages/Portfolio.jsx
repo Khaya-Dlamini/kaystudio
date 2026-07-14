@@ -20,7 +20,7 @@ export default function Portfolio() {
           </span>
           <h1>Every brand gets its own look.</h1>
           <p>
-            A selection of sites I've designed and built — each one shaped around the brand it belongs
+            A selection of sites I've designed, each one shaped around the brand it belongs
             to, not a shared template.
           </p>
         </div>
