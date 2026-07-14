@@ -1,20 +1,51 @@
 import { useEffect, useState } from "react";
 import Reveal from "../components/Reveal.jsx";
 import { PROJECT_TYPES } from "../data/projects.js";
+import { submitInquiry } from "../lib/inquiry.js";
 
 export default function Book() {
   const [projectType, setProjectType] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    brand: ""
+  });
 
   useEffect(() => {
     document.title = "Book a Project — Lihle Websites";
     window.scrollTo({ top: 0 });
   }, []);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      await submitInquiry({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        project_type: projectType,
+        brand: formData.brand
+      });
+
+      setSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (error) {
+      setErrorMessage(error.message || "Something went wrong while sending your inquiry.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   return (
@@ -47,19 +78,19 @@ export default function Book() {
               <form onSubmit={onSubmit}>
                 <div className="field">
                   <label htmlFor="name">Full name</label>
-                  <input id="name" type="text" required placeholder="e.g. Thando Nkosi" />
+                  <input id="name" type="text" required placeholder="e.g. Thando Nkosi" value={formData.name} onChange={handleChange} />
                 </div>
 
                 <div className="field">
                   <label htmlFor="email">Email address</label>
-                  <input id="email" type="email" required placeholder="you@yourbrand.com" />
+                  <input id="email" type="email" required placeholder="you@yourbrand.com" value={formData.email} onChange={handleChange} />
                 </div>
 
                 <div className="field">
                   <label htmlFor="phone">
                     Phone / WhatsApp <span className="hint">(optional)</span>
                   </label>
-                  <input id="phone" type="tel" placeholder="+27 00 000 0000" />
+                  <input id="phone" type="tel" placeholder="+27 00 000 0000" value={formData.phone} onChange={handleChange} />
                 </div>
 
                 <div className="field">
@@ -84,12 +115,16 @@ export default function Book() {
                     id="brand"
                     required
                     placeholder="What do you do, who's it for, and what should the site achieve?"
+                    value={formData.brand}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 
+                {errorMessage ? <p className="form-error">{errorMessage}</p> : null}
+
                 <div className="row-actions">
-                  <button type="submit" className="btn btn-gold">
-                    <i className="fa-solid fa-paper-plane"></i> Send Project Details
+                  <button type="submit" className="btn btn-gold" disabled={isSubmitting}>
+                    <i className="fa-solid fa-paper-plane"></i> {isSubmitting ? "Sending..." : "Send Project Details"}
                   </button>
                 </div>
               </form>
